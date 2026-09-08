@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Hanken Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-peach: #ff8a65;
+  --color-peach-dim: #ffb59e;
+  --color-cyan: #22d3ee;
+  --color-cyan-glow: #5de6ff;
+  --color-obsidian: #0b0e15;
+  --color-obsidian-card: #10131a;
+  --color-obsidian-elevated: #151821;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    background-color: #0b0e15;
+    color: #e1e2ec;
+  }
+
+  /* Subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #080a10;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #272a32;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff8a65;
+  }
+}
+
+.font-display {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-body {
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* Material Symbols sizing helper */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
