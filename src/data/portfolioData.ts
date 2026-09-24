@@ -49,7 +49,8 @@ export const ARCHITECTURE_NODES: ArchitectureNode[] = [
       { name: 'NumPy', role: 'Tensors' }
     ],
     details: {
-      algorithmicFocus: 'State-space exploration, policy gradient updates, model quantization',
+      algorithmicFocus:
+        'State-space exploration, policy gradient updates, model quantization',
       throughputTarget: '< 20ms per inference batch',
       primaryStack: ['PyTorch', 'Transformers', 'NumPy', 'Scikit-Learn']
     }
@@ -68,7 +69,8 @@ export const ARCHITECTURE_NODES: ArchitectureNode[] = [
       { name: 'TorchVision', role: 'Data Augmentation' }
     ],
     details: {
-      algorithmicFocus: 'Frame differentiation, anchor-free bounding boxes, non-max suppression',
+      algorithmicFocus:
+        'Frame differentiation, anchor-free bounding boxes, non-max suppression',
       throughputTarget: '30+ FPS @ 640x480 resolution',
       primaryStack: ['Ultralytics YOLOv8', 'OpenCV 4.x', 'TorchVision']
     }
@@ -87,7 +89,8 @@ export const ARCHITECTURE_NODES: ArchitectureNode[] = [
       { name: 'Lyzr', role: 'Agent Automation' }
     ],
     details: {
-      algorithmicFocus: 'Streaming token generation, prompt sanitization, structured JSON schema response contracts',
+      algorithmicFocus:
+        'Streaming token generation, prompt sanitization, structured JSON schema response contracts',
       throughputTarget: 'Sub-second API response round-trips',
       primaryStack: ['FastAPI', 'Gradio', 'Lyzr Agents', 'Pydantic']
     }
@@ -106,9 +109,15 @@ export const ARCHITECTURE_NODES: ArchitectureNode[] = [
       { name: 'RL Agents', role: 'Policy Engine' }
     ],
     details: {
-      algorithmicFocus: 'Markov Decision Processes, state-space penalty avoidance, reward shaping',
+      algorithmicFocus:
+        'Markov Decision Processes, state-space penalty avoidance, reward shaping',
       throughputTarget: 'Autonomous remediation in < 3 action steps',
-      primaryStack: ['OpenEnv API', 'Gymnasium', 'PyTorch RL', 'Finite State Automata']
+      primaryStack: [
+        'OpenEnv API',
+        'Gymnasium',
+        'PyTorch RL',
+        'Finite State Automata'
+      ]
     }
   },
   {
@@ -125,9 +134,15 @@ export const ARCHITECTURE_NODES: ArchitectureNode[] = [
       { name: 'C/C++', role: 'Firmware' }
     ],
     details: {
-      algorithmicFocus: 'Hardware PWM control, ADC sensor calibration, non-blocking asynchronous WiFi socket polling',
+      algorithmicFocus:
+        'Hardware PWM control, ADC sensor calibration, non-blocking asynchronous WiFi socket polling',
       throughputTarget: '10ms latency ping across local LAN',
-      primaryStack: ['ESP-IDF / Arduino C++', 'ESP32-WROOM-32', 'FreeRTOS', 'WebSockets']
+      primaryStack: [
+        'ESP-IDF / Arduino C++',
+        'ESP32-WROOM-32',
+        'FreeRTOS',
+        'WebSockets'
+      ]
     }
   },
   {
@@ -144,9 +159,15 @@ export const ARCHITECTURE_NODES: ArchitectureNode[] = [
       { name: 'Docker', role: 'Containerization' }
     ],
     details: {
-      algorithmicFocus: 'Post-training INT8 quantization, memory footprint reduction, local hardware tensor execution',
+      algorithmicFocus:
+        'Post-training INT8 quantization, memory footprint reduction, local hardware tensor execution',
       throughputTarget: 'Zero cloud reliance for core mission loop',
-      primaryStack: ['ONNX Runtime', 'TensorRT', 'Docker Compose', 'Alpine Linux']
+      primaryStack: [
+        'ONNX Runtime',
+        'TensorRT',
+        'Docker Compose',
+        'Alpine Linux'
+      ]
     }
   }
 ];
@@ -160,7 +181,12 @@ export const PROJECTS: Project[] = [
     badge: 'AUTONOMOUS EDGE HARDWARE',
     description:
       'End-to-end distributed architecture for real-time surveillance, threat detection, and environmental mapping. Interlinks an ESP32 hardware bridge with a remote YOLOv8 inference server over high-concurrency WebSockets.',
-    pipeline: ['CAMERA', 'VISION RELAY', 'YOLOv8 DETECTION', 'AUTONOMOUS DECISION'],
+    pipeline: [
+      'CAMERA',
+      'VISION RELAY',
+      'YOLOv8 DETECTION',
+      'AUTONOMOUS DECISION'
+    ],
     tags: ['ESP32', 'YOLOv8', 'Computer Vision', 'WebSockets'],
     telemetryType: 'rover',
     telemetryData: {
@@ -181,20 +207,24 @@ export const PROJECTS: Project[] = [
         {
           name: 'Hardware Sensory Layer',
           role: 'ESP32-WROOM-32 with OV2640 optical lens',
-          spec: 'MJPEG streaming over WebSocket with dual PWM H-bridge motor governance'
+          spec:
+            'MJPEG streaming over WebSocket with dual PWM H-bridge motor governance'
         },
         {
           name: 'Inference Engine',
           role: 'Ultralytics YOLOv8n fine-tuned model',
-          spec: 'Anchor-free bounding boxes with 80-class object detection and threat confidence thresholds'
+          spec:
+            'Anchor-free bounding boxes with 80-class object detection and threat confidence thresholds'
         },
         {
           name: 'Command Loop',
           role: 'Asynchronous bidirectional socket coordinator',
-          spec: '< 40ms end-to-end loop latency from photon capture to motor corrective adjustment'
+          spec:
+            '< 40ms end-to-end loop latency from photon capture to motor corrective adjustment'
         }
       ],
-      telemetryProtocol: 'WebSocket TLS with JSON-wrapped binary byte buffers',
+      telemetryProtocol:
+        'WebSocket TLS with JSON-wrapped binary byte buffers',
       githubUrl: 'https://github.com/sohansa035-bot'
     }
   },
@@ -208,7 +238,12 @@ export const PROJECTS: Project[] = [
     featuredTag: 'FEATURED // META PYTORCH OPENENV HACKATHON',
     description:
       'Interactive Reinforcement Learning simulation environment designed to model server failure topologies and train self-healing agents. Built during the Meta PyTorch OpenEnv Hackathon to simulate latency cascades, anomalous memory leaks, and autonomous container remediation policies.',
-    pipeline: ['SYSTEM INCIDENT', 'SRE AGENT OBSERVATION', 'POLICY INFERENCE', 'AUTOMATED RECOVERY'],
+    pipeline: [
+      'SYSTEM INCIDENT',
+      'SRE AGENT OBSERVATION',
+      'POLICY INFERENCE',
+      'AUTOMATED RECOVERY'
+    ],
     tags: ['Python', 'RL Environment', 'OpenEnv API', 'Meta PyTorch Track'],
     telemetryType: 'sre',
     telemetryData: {
@@ -228,20 +263,24 @@ export const PROJECTS: Project[] = [
         {
           name: 'Chaos Generator',
           role: 'Stochastic anomaly injection engine',
-          spec: 'Simulates memory leaks, network partitions, and thread starvation across virtual nodes'
+          spec:
+            'Simulates memory leaks, network partitions, and thread starvation across virtual nodes'
         },
         {
           name: 'OpenEnv Interface',
           role: 'Gym-compatible state and action space definition',
-          spec: 'Discrete action space (drain node, kill process, scale replica, reallocate heap) with continuous telemetry observations'
+          spec:
+            'Discrete action space (drain node, kill process, scale replica, reallocate heap) with continuous telemetry observations'
         },
         {
           name: 'Policy Optimizer',
           role: 'Deep Q-Network & Policy Gradient training harness',
-          spec: 'Trains agent to prioritize system uptime and mitigate cascading SLA breaches'
+          spec:
+            'Trains agent to prioritize system uptime and mitigate cascading SLA breaches'
         }
       ],
-      telemetryProtocol: 'OpenEnv API telemetry vectors with reward backpropagation',
+      telemetryProtocol:
+        'OpenEnv API telemetry vectors with reward backpropagation',
       githubUrl: 'https://github.com/sohansa035-bot'
     }
   },
@@ -253,7 +292,12 @@ export const PROJECTS: Project[] = [
     badge: 'AGRITECH INTELLIGENCE',
     description:
       'Predictive agricultural operations platform synthesizing soil moisture metrics, ambient microclimate sensors, and yield forecasting algorithms into a high-density operational telemetry dashboard.',
-    pipeline: ['SOIL SENSORS', 'TELEMETRY AGGREGATION', 'ANALYTICS ENGINE', 'AI CROP INSIGHT'],
+    pipeline: [
+      'SOIL SENSORS',
+      'TELEMETRY AGGREGATION',
+      'ANALYTICS ENGINE',
+      'AI CROP INSIGHT'
+    ],
     tags: ['TypeScript', 'Dashboard UI', 'Agriculture', 'AI Forecasting'],
     telemetryType: 'agri',
     telemetryData: {
@@ -273,20 +317,24 @@ export const PROJECTS: Project[] = [
         {
           name: 'Field Sensor Node',
           role: 'Capacitive moisture, temperature, and NPK probes',
-          spec: 'Ultra-low-power sleep cycles with solar harvesting circuitry'
+          spec:
+            'Ultra-low-power sleep cycles with solar harvesting circuitry'
         },
         {
           name: 'Edge Gateway',
           role: 'MQTT/HTTP local concentrator',
-          spec: 'Local buffer storage for offline resiliency during rural connection dropouts'
+          spec:
+            'Local buffer storage for offline resiliency during rural connection dropouts'
         },
         {
           name: 'Telemetry Console',
           role: 'Real-time responsive monitoring interface',
-          spec: 'Precision graphs, evapotranspiration calculation, and smart valve actuation triggers'
+          spec:
+            'Precision graphs, evapotranspiration calculation, and smart valve actuation triggers'
         }
       ],
-      telemetryProtocol: 'MQTT broker with compact binary sensor payloads',
+      telemetryProtocol:
+        'MQTT broker with compact binary sensor payloads',
       githubUrl: 'https://github.com/sohansa035-bot'
     }
   },
@@ -298,7 +346,12 @@ export const PROJECTS: Project[] = [
     badge: 'TOOL EXECUTION HARNESS',
     description:
       'High-throughput web interface engineered with Gradio for automated JSON schema validation, dynamic argument injection, and reliable tool execution across isolated environments.',
-    pipeline: ['SCHEMA INPUT', 'TYPE VALIDATION', 'TOOL INVOCATION', 'STRUCTURED OUTPUT'],
+    pipeline: [
+      'SCHEMA INPUT',
+      'TYPE VALIDATION',
+      'TOOL INVOCATION',
+      'STRUCTURED OUTPUT'
+    ],
     tags: ['Python', 'Gradio', 'JSON Schema', 'Backend Systems'],
     telemetryType: 'schema',
     telemetryData: {
@@ -324,20 +377,24 @@ export const PROJECTS: Project[] = [
         {
           name: 'Schema Parsing Engine',
           role: 'Pydantic & JSON-Schema introspection validator',
-          spec: 'Detects missing mandatory parameters, type mismatches, and boundary violations'
+          spec:
+            'Detects missing mandatory parameters, type mismatches, and boundary violations'
         },
         {
           name: 'Interactive Gradio Sandbox',
           role: 'High-throughput developer interface',
-          spec: 'Simulates agent function calls with real-time argument form generation'
+          spec:
+            'Simulates agent function calls with real-time argument form generation'
         },
         {
           name: 'Execution Dispatcher',
           role: 'Sandboxed Python process runner',
-          spec: 'Safe execution boundary with timeout enforcement and captured stdout/stderr'
+          spec:
+            'Safe execution boundary with timeout enforcement and captured stdout/stderr'
         }
       ],
-      telemetryProtocol: 'HTTP REST / JSON-RPC with strict schema typing',
+      telemetryProtocol:
+        'HTTP REST / JSON-RPC with strict schema typing',
       githubUrl: 'https://github.com/sohansa035-bot'
     }
   },
@@ -349,7 +406,12 @@ export const PROJECTS: Project[] = [
     badge: 'CYBERSECURITY INTELLIGENCE',
     description:
       'AI-driven Security Operations Center alert triage architecture. Interfaces incoming high-frequency log streams with Hugging Face classification models to prioritize critical security incidents in sub-second intervals.',
-    pipeline: ['SIEM EVENT', 'FEATURE EXTRACTION', 'MODEL INFERENCE', 'INCIDENT TRIAGE'],
+    pipeline: [
+      'SIEM EVENT',
+      'FEATURE EXTRACTION',
+      'MODEL INFERENCE',
+      'INCIDENT TRIAGE'
+    ],
     tags: ['FastAPI', 'Hugging Face', 'Live Inference', 'Threat Triage'],
     telemetryType: 'soc',
     telemetryData: {
@@ -369,20 +431,76 @@ export const PROJECTS: Project[] = [
         {
           name: 'Event Stream Ingestor',
           role: 'FastAPI async queue receiver',
-          spec: 'Buffered in-memory intake handling up to 2,000 requests per second'
+          spec:
+            'Buffered in-memory intake handling up to 2,000 requests per second'
         },
         {
           name: 'Transformer Classifier',
           role: 'Hugging Face DistilBERT fine-tuned on security logs',
-          spec: 'Categorizes events into Benign, Reconnaissance, Injection, or Exfiltration'
+          spec:
+            'Categorizes events into Benign, Reconnaissance, Injection, or Exfiltration'
         },
         {
           name: 'Automated Quarantine Dispatch',
           role: 'Firewall & network isolation webhook',
-          spec: 'Generates structured incident packets with recommended mitigation commands'
+          spec:
+            'Generates structured incident packets with recommended mitigation commands'
         }
       ],
-      telemetryProtocol: 'Syslog UDP / HTTPS Webhooks with mutual TLS authentication',
+      telemetryProtocol:
+        'Syslog UDP / HTTPS Webhooks with mutual TLS authentication',
+      githubUrl: 'https://github.com/sohansa035-bot'
+    }
+  },
+  {
+    id: 'smps-tech-lab',
+    index: 'PROJECT // 06',
+    title: 'SMPS TECH LAB',
+    subtitle: 'Technology Research & Innovation Lab',
+    badge: 'R&D / INNOVATION',
+    description:
+      'Technology research and development initiative focused on engineering practical solutions across intelligent systems, embedded technology, and emerging digital infrastructure.',
+    pipeline: [
+      'RESEARCH',
+      'PROTOTYPE',
+      'VALIDATION',
+      'DEPLOYMENT'
+    ],
+    tags: ['R&D', 'AI', 'IoT', 'Embedded Systems'],
+    telemetryType: 'lab',
+    telemetryData: {
+      status: 'ACTIVE',
+      focus: 'TECHNOLOGY INNOVATION',
+      stage: 'PROTOTYPE',
+      domain: 'AI / IoT / EMBEDDED'
+    },
+    architectureSummary:
+      'Research Concept → Engineering Prototype → Technical Validation → Deployment',
+    fullDossier: {
+      systemContext:
+        'SMPS Tech Lab is an R&D-focused technology initiative for exploring and developing practical engineering solutions across emerging technology domains.',
+      keyModules: [
+        {
+          name: 'Research & Ideation',
+          role: 'Technology exploration',
+          spec:
+            'Identifies practical problems and evaluates emerging technical approaches'
+        },
+        {
+          name: 'Prototype Engineering',
+          role: 'Rapid system development',
+          spec:
+            'Builds and validates hardware and software concepts'
+        },
+        {
+          name: 'Technical Validation',
+          role: 'System testing',
+          spec:
+            'Evaluates prototypes for reliability, functionality, and deployment readiness'
+        }
+      ],
+      telemetryProtocol:
+        'Engineering metrics and prototype validation data',
       githubUrl: 'https://github.com/sohansa035-bot'
     }
   }
@@ -404,13 +522,19 @@ export const EXPERIENCE_ITEMS: ExperienceItem[] = [
 
 export const LEADERSHIP_ITEM: LeadershipItem = {
   role: 'TECHNICAL CO-HEAD',
-  organization: 'IEEE Technology and Engineering Management Society (TEMS) // REVA University',
+  organization:
+    'IEEE Technology and Engineering Management Society (TEMS) // REVA University',
   period: '2026 – PRESENT',
   description:
     'Leading engineering initiatives, ideathons, and technical workshops across university technical societies. Directing student cohorts through hands-on AI/ML implementations and fostering collaboration across practical software and hardware projects.',
   focus: 'FOCUS: AI/ML PEER MENTORSHIP & WORKSHOPS',
   location: 'BANGALORE, IN',
-  initiatives: ['LEAD INITIATIVES', 'COORDINATE HACKATHONS', 'BUILD PROTOCOLS', 'ENABLE PEERS']
+  initiatives: [
+    'LEAD INITIATIVES',
+    'COORDINATE HACKATHONS',
+    'BUILD PROTOCOLS',
+    'ENABLE PEERS'
+  ]
 };
 
 export const ACHIEVEMENTS = [
